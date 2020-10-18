@@ -1,6 +1,5 @@
 import os
-from locust import HttpLocust, TaskSet, task
-from locust.wait_time import between
+from locust import HttpLocust, TaskSet, task, between
 
 
 class CustodianTaskSet(TaskSet):
