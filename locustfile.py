@@ -1,5 +1,5 @@
 import os
-from locust import HttpLocust, TaskSet, task, between
+from locust import TaskSet, task, between, HttpUser
 
 
 class CustodianTaskSet(TaskSet):
@@ -44,7 +44,7 @@ class FastTasksSet(TaskSet):
     tasks = {CustodianTaskSet, }
 
 
-class LegalLocust(HttpLocust):
+class LegalLocust(HttpUser):
     task_set = FastTasksSet
 
     headers = {
